@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ユーロドルシミュレーション｜特殊雲サイン</title>
+
+<style>
+:root{
+  --bg:#0b1017;--bg2:#121925;--card:#151e2b;--line:#273244;--text:#eef4ff;--muted:#b9c5d8;--accent:#f0b400;--accent2:#7fd1ff;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,var(--bg) 0%, #0f1520 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.9}
+a{color:var(--accent2);text-decoration:none}
+img{max-width:100%;display:block;border-radius:14px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(11,16,23,.86);border-bottom:1px solid var(--line)}
+.topbar-inner{display:flex;flex-wrap:wrap;gap:18px;align-items:center;padding:14px 0}
+.topbar a{font-size:14px;color:var(--muted)}
+.hero{padding:74px 0 46px;border-bottom:1px solid var(--line);background:radial-gradient(circle at top right, rgba(240,180,0,.18), transparent 28%),radial-gradient(circle at top left, rgba(127,209,255,.12), transparent 24%)}
+.kicker{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px;letter-spacing:.08em;color:var(--accent);margin-bottom:16px}
+h1{font-size:42px;line-height:1.35;margin:0 0 14px}
+h2{font-size:30px;line-height:1.45;margin:0 0 16px}
+h3{font-size:22px;line-height:1.5;margin:0 0 12px}
+p{margin:0 0 14px}.lead{font-size:18px;color:var(--muted)}
+.hero-actions,.page-links,.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-weight:700}
+.btn.primary{background:var(--accent);color:#111;border-color:#d59a00}
+.section{padding:42px 0;border-bottom:1px solid var(--line)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.grid{display:grid;gap:18px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:820px){.grid-2,.grid-3{grid-template-columns:1fr}h1{font-size:34px}}
+.quote{font-size:24px;font-weight:800;line-height:1.7}.accent{color:var(--accent);font-weight:800}
+.note{font-size:13px;color:var(--muted)}.center{text-align:center}
+ul{margin:0;padding-left:1.2em}li{margin:6px 0}
+.pill-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.pill{padding:8px 12px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);font-size:14px;color:var(--text)}
+.img-wrap{background:#fff;padding:10px;border-radius:18px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:880px;background:#0f1621}
+th,td{border:1px solid var(--line);padding:9px 8px;text-align:right;white-space:nowrap}
+th{background:var(--bg2)}td:first-child,th:first-child{text-align:center}
+.small{font-size:13px;color:var(--muted)}hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
+</style>
+
+</head>
+<body>
+
+<div class="topbar"><div class="wrap topbar-inner">
+<a href="index.html">メインLP</a>
+<a href="usdjpy.html">ドル円</a>
+<a href="eurusd.html">ユーロドル</a>
+<a href="gbpjpy.html">ポンド円</a>
+<a href="qa.html">Q&A</a>
+<a href="pricing.html">価格</a>
+<a href="important.html">重要事項</a>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">市場別シミュレーション</div>
+    <h1>ユーロドルシミュレーション</h1>
+    <p class="lead">世界で最も取引量の多い通貨ペアでも、同様に運用可能です。</p>
+    <div class="page-links">
+      <span class="btn primary">内容をご確認の上、いつでもご連絡ください</span>
+      <a class="btn" href="pricing.html">価格を見る</a>
+      <a class="btn" href="index.html">メインLPへ戻る</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="section">
+    <div class="grid grid-2">
+      <div class="card">
+        <h2>完全シミュレーション表</h2>
+        <div class="table-wrap"><table><tr><th>回数</th><th>日数</th><th>ロット</th><th>資金</th><th>証拠金</th><th>pips</th><th>利益</th><th>累計利益</th><th>残高</th></tr><tr><td>1</td><td>1</td><td>0.05</td><td>50,000</td><td>305</td><td>70</td><td>5,565</td><td>5,565</td><td>55,565</td></tr><tr><td>2</td><td>2</td><td>0.05</td><td>55,565</td><td>305</td><td>70</td><td>5,565</td><td>11,130</td><td>61,130</td></tr><tr><td>3</td><td>3</td><td>0.06</td><td>61,130</td><td>366</td><td>70</td><td>6,678</td><td>17,808</td><td>67,808</td></tr><tr><td>4</td><td>4</td><td>0.07</td><td>67,808</td><td>427</td><td>70</td><td>7,791</td><td>25,599</td><td>75,599</td></tr><tr><td>5</td><td>5</td><td>0.07</td><td>75,599</td><td>427</td><td>70</td><td>7,791</td><td>33,390</td><td>83,390</td></tr><tr><td>6</td><td>6</td><td>0.08</td><td>83,390</td><td>488</td><td>70</td><td>8,904</td><td>42,294</td><td>92,294</td></tr><tr><td>7</td><td>7</td><td>0.09</td><td>92,294</td><td>549</td><td>70</td><td>10,017</td><td>52,311</td><td>102,311</td></tr><tr><td>8</td><td>8</td><td>0.10</td><td>102,311</td><td>610</td><td>70</td><td>11,130</td><td>63,441</td><td>113,441</td></tr><tr><td>9</td><td>9</td><td>0.11</td><td>113,441</td><td>671</td><td>70</td><td>12,243</td><td>75,684</td><td>125,684</td></tr><tr><td>10</td><td>10</td><td>0.12</td><td>125,684</td><td>732</td><td>70</td><td>13,356</td><td>89,040</td><td>139,040</td></tr><tr><td>11</td><td>11</td><td>0.13</td><td>139,040</td><td>793</td><td>70</td><td>14,469</td><td>103,509</td><td>153,509</td></tr><tr><td>12</td><td>12</td><td>0.14</td><td>153,509</td><td>854</td><td>70</td><td>15,582</td><td>119,091</td><td>169,091</td></tr><tr><td>13</td><td>13</td><td>0.16</td><td>169,091</td><td>977</td><td>70</td><td>17,808</td><td>136,899</td><td>186,899</td></tr><tr><td>14</td><td>14</td><td>0.17</td><td>186,899</td><td>1,038</td><td>70</td><td>18,921</td><td>155,820</td><td>205,820</td></tr><tr><td>15</td><td>15</td><td>0.19</td><td>205,820</td><td>1,160</td><td>70</td><td>21,147</td><td>176,967</td><td>226,967</td></tr><tr><td>16</td><td>16</td><td>0.21</td><td>226,967</td><td>1,282</td><td>70</td><td>23,373</td><td>200,340</td><td>250,340</td></tr><tr><td>17</td><td>17</td><td>0.23</td><td>250,340</td><td>1,404</td><td>70</td><td>25,599</td><td>225,939</td><td>275,939</td></tr><tr><td>18</td><td>18</td><td>0.25</td><td>275,939</td><td>1,526</td><td>70</td><td>27,825</td><td>253,764</td><td>303,764</td></tr><tr><td>19</td><td>19</td><td>0.28</td><td>303,764</td><td>1,710</td><td>70</td><td>31,164</td><td>284,928</td><td>334,928</td></tr><tr><td>20</td><td>20</td><td>0.31</td><td>334,928</td><td>1,892</td><td>70</td><td>34,503</td><td>319,431</td><td>369,431</td></tr><tr><td>21</td><td>21</td><td>0.34</td><td>369,431</td><td>2,075</td><td>70</td><td>37,842</td><td>357,273</td><td>407,273</td></tr><tr><td>22</td><td>22</td><td>0.37</td><td>407,273</td><td>2,258</td><td>70</td><td>41,181</td><td>398,454</td><td>448,454</td></tr><tr><td>23</td><td>23</td><td>0.41</td><td>448,454</td><td>2,502</td><td>70</td><td>45,633</td><td>444,087</td><td>494,087</td></tr><tr><td>24</td><td>24</td><td>0.45</td><td>494,087</td><td>2,746</td><td>70</td><td>50,085</td><td>494,172</td><td>544,172</td></tr><tr><td>25</td><td>25</td><td>0.49</td><td>544,172</td><td>2,990</td><td>70</td><td>54,537</td><td>548,709</td><td>598,709</td></tr><tr><td>26</td><td>26</td><td>0.54</td><td>598,709</td><td>3,295</td><td>70</td><td>60,102</td><td>608,811</td><td>658,811</td></tr><tr><td>27</td><td>27</td><td>0.60</td><td>658,811</td><td>3,662</td><td>70</td><td>66,780</td><td>675,591</td><td>725,591</td></tr><tr><td>28</td><td>28</td><td>0.66</td><td>725,591</td><td>4,029</td><td>70</td><td>73,458</td><td>749,049</td><td>799,049</td></tr><tr><td>29</td><td>29</td><td>0.72</td><td>799,049</td><td>4,396</td><td>70</td><td>80,136</td><td>829,185</td><td>879,185</td></tr><tr><td>30</td><td>30</td><td>0.79</td><td>879,185</td><td>4,885</td><td>70</td><td>87,927</td><td>917,112</td><td>967,112</td></tr><tr><td>31</td><td>31</td><td>0.87</td><td>967,112</td><td>5,379</td><td>70</td><td>96,831</td><td>1,013,943</td><td>1,063,943</td></tr><tr><td>32</td><td>32</td><td>0.96</td><td>1,063,943</td><td>5,866</td><td>70</td><td>106,848</td><td>1,120,791</td><td>1,170,791</td></tr><tr><td>33</td><td>33</td><td>1.06</td><td>1,170,791</td><td>9,707</td><td>70</td><td>117,978</td><td>1,238,769</td><td>1,288,769</td></tr><tr><td>34</td><td>34</td><td>1.16</td><td>1,288,769</td><td>10,618</td><td>70</td><td>129,108</td><td>1,367,877</td><td>1,417,877</td></tr><tr><td>35</td><td>35</td><td>1.28</td><td>1,417,877</td><td>11,720</td><td>70</td><td>142,464</td><td>1,510,341</td><td>1,560,341</td></tr><tr><td>36</td><td>36</td><td>1.41</td><td>1,560,341</td><td>12,913</td><td>70</td><td>156,933</td><td>1,667,274</td><td>1,717,274</td></tr><tr><td>37</td><td>37</td><td>1.55</td><td>1,717,274</td><td>14,192</td><td>70</td><td>172,515</td><td>1,839,789</td><td>1,889,789</td></tr><tr><td>38</td><td>38</td><td>1.70</td><td>1,889,789</td><td>15,554</td><td>70</td><td>189,210</td><td>2,028,999</td><td>2,078,999</td></tr><tr><td>39</td><td>39</td><td>1.87</td><td>2,078,999</td><td>17,111</td><td>70</td><td>208,131</td><td>2,237,130</td><td>2,287,130</td></tr><tr><td>40</td><td>40</td><td>2.06</td><td>2,287,130</td><td>18,861</td><td>70</td><td>229,278</td><td>2,466,408</td><td>2,516,408</td></tr><tr><td>41</td><td>41</td><td>2.27</td><td>2,516,408</td><td>20,786</td><td>70</td><td>252,651</td><td>2,719,059</td><td>2,769,059</td></tr><tr><td>42</td><td>42</td><td>2.49</td><td>2,769,059</td><td>22,800</td><td>70</td><td>277,137</td><td>2,996,196</td><td>3,046,196</td></tr></table></div>
+      </div>
+      <div class="card">
+        <h2>資金成長グラフ</h2>
+        <div class="img-wrap"><img src="eurusd_growth.png" alt="ユーロドルシミュレーション 資金成長グラフ"></div>
+        <p class="note">ユーロドルはバランス型の市場として、安定寄りの伸び方になります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="card">
+      <h2>補足</h2>
+      <ul>
+        <li>このページは「この市場でも運用可能」という証拠ページです。</li>
+        <li>市場ごとに値幅・必要ロット・到達速度は変わります。</li>
+        <li>ただし、ロジック自体は同じ考え方で運用可能です。</li>
+      </ul>
+      <div class="cta-row">
+        <span class="btn primary">内容をご確認の上、いつでもご連絡ください</span>
+        <a class="btn" href="qa.html">Q&Aを見る</a>
+        <a class="btn" href="pricing.html">価格を見る</a>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
