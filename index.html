@@ -1,187 +1,94 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>最終LP</title>
 
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>重要事項｜特殊雲サイン</title>
 <style>
+:root{
+  --bg:#0e1116; --card:#151a22; --soft:#1e2530; --line:#2a3444;
+  --text:#eef3fb; --muted:#b8c2d3; --accent:#f5b301; --accent2:#8ed1ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:#0f1115;
-  color:#fff;
-  line-height:1.8;
+  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans","Yu Gothic",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.9;
 }
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+a{color:var(--accent2);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:24px}
+header.hero{
+  padding:72px 24px 42px;
+  background:linear-gradient(180deg,#111723 0%, #0e1116 100%);
+  border-bottom:1px solid var(--line);
 }
-h1{font-size:42px;line-height:1.2;}
-h2{font-size:26px;margin-top:40px;}
-.section{margin:80px 0;}
-.gold{color:#c9a55c;font-weight:bold;}
-.box{
-  border:1px solid rgba(255,255,255,0.1);
-  padding:20px;
-  margin-top:20px;
+.hero h1{font-size:42px;line-height:1.3;margin:0 0 14px}
+.hero p{font-size:18px;color:var(--muted);margin:0 0 24px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 24px}
+.badge{background:var(--soft);border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--text);font-size:14px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;
+  border:1px solid var(--line);background:var(--soft);color:var(--text)
 }
-.big{font-size:28px;font-weight:bold;}
-.cta{
-  border:1px solid #c9a55c;
-  padding:15px;
-  text-align:center;
-  margin-top:20px;
+.btn.primary{background:var(--accent);color:#111;border-color:#d49a00}
+nav.top{
+  position:sticky;top:0;z-index:5;background:rgba(14,17,22,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line)
 }
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:20px;
+nav.top .wrap{display:flex;gap:18px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+h2{font-size:30px;line-height:1.4;margin:0 0 16px}
+h3{font-size:22px;line-height:1.5;margin:22px 0 10px}
+.lead{font-size:18px;color:var(--muted)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.18)
 }
-td{
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  padding:8px;
-}
+.grid{display:grid;gap:18px}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:820px){.grid-2,.grid-3{grid-template-columns:1fr}.hero h1{font-size:34px}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border:1px solid var(--line);padding:9px 8px;text-align:right}
+th{background:var(--soft)}
+td:first-child,th:first-child{text-align:center}
+.note{font-size:13px;color:var(--muted)}
+.kicker{color:var(--accent);font-weight:800;letter-spacing:.06em;font-size:12px;text-transform:uppercase}
+.quote{font-size:24px;font-weight:800;line-height:1.6}
+.imgbox{background:#fff;border-radius:16px;padding:10px}
+img.resp{width:100%;height:auto;display:block;border-radius:12px}
+.list{margin:0;padding-left:1.2em}
+.list li{margin:6px 0}
+.compare td,.compare th{text-align:center}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+.small{font-size:13px;color:var(--muted)}
+.center{text-align:center}
+hr.sep{border:none;border-top:1px solid var(--line);margin:28px 0}
 </style>
-
-</head>
-<body>
-
-<div class="container">
-
-<!-- ① ファーストビュー -->
-<div class="section">
-<p>これは最後の判断材料です。</p>
-
-<h1>
-5万円から始めて<br>
-約300万円まで到達した現実
-</h1>
-
-<p>サインツールを使ったシミュレーション結果です。</p>
-<p>ここまで来ているなら、もう理解しているはずです。</p>
+</head><body>
+<nav class="top">
+<div class="wrap">
+<a href="index.html">メインLP</a><a href="gold.html">ゴールド</a>
+<a href="usdjpy.html">ドル円</a>
+<a href="eurusd.html">ユーロドル</a>
+<a href="gbpjpy.html">ポンド円</a>
+<a href="qa.html">Q&amp;A</a>
+<a href="pricing.html">価格</a>
+<a href="important.html">重要事項</a>
 </div>
-
-<!-- ② グラフ -->
-<div class="section">
-<h2>まず、結果を見てください</h2>
-
-<img src="gold.png" style="width:100%;">
-
-<p>・初期資金：5万円</p>
-<p>・リスクリワード：1:3</p>
-<p>・1日1トレード</p>
-
-<p class="big">途中で、すでに回収ラインを超えています。</p>
-</div>
-
-<!-- ③ ゴールド表 -->
-<div class="section">
-<h2>ゴールド（40回シミュレーション）</h2>
-
-<table>
-<tbody>
-<tr><td>1</td><td>65,000</td></tr>
-<tr><td>2</td><td>84,500</td></tr>
-<tr><td>3</td><td>109,850</td></tr>
-<tr><td>4</td><td>142,805</td></tr>
-<tr><td>5</td><td>185,646</td></tr>
-<tr><td>6</td><td>241,340</td></tr>
-<tr><td>7</td><td>313,742</td></tr>
-<tr><td>8</td><td>407,864</td></tr>
-<tr><td>9</td><td>530,223</td></tr>
-<tr><td>10</td><td>689,290</td></tr>
-<tr><td>15</td><td>2,792,042</td></tr>
-<tr><td>20</td><td>11,306,565</td></tr>
-<tr><td>25</td><td>45,801,602</td></tr>
-<tr><td>30</td><td>185,646,509</td></tr>
-<tr><td>35</td><td>752,766,180</td></tr>
-<tr><td>40</td><td>3,051,757,279</td></tr>
-</tbody>
-</table>
-</div>
-
-<!-- ④ 回収ライン -->
-<div class="section">
-<h2>“高い”ではなく“何回で回収できるか”です</h2>
-
-<div class="box">
-<p>100万プラン → 約29回</p>
-<p>150万プラン → 約33回</p>
-<p>200万プラン → 約36回</p>
-</div>
-
-<p class="big">その後は、すべて利益です。</p>
-</div>
-
-<!-- ⑤ 本文 -->
-<div class="section">
-<h2>迷っている理由は、もう分かっています</h2>
-
-<p>やりたいと思っている。</p>
-<p>でも金額で止まっている。</p>
-
-<p>それも当然です。</p>
-
-<p>
-このまま何もせずに時間が過ぎるのか、  
-一度取り組むのか。
-</p>
-</div>
-
-<!-- ⑥ 資金 -->
-<div class="section">
-<h2>問題は「できるか」ではなく「どう動くか」です</h2>
-
-<p>これは消費ではなく、回収前提の投資です。</p>
-<p>回収できる前提で見たとき、意味は変わるはずです。</p>
-</div>
-
-<!-- ⑦ 保証 -->
-<div class="section">
-<h2>万が一の場合</h2>
-
-<p>100%勝てるとは言いません。</p>
-<p>負けもあります。</p>
-
-<p>
-指定条件で40回トレードし、  
-一度も勝ちがなければ全額返金。
-</p>
-</div>
-
-<!-- ⑧ 市場 -->
-<div class="section">
-<h2>ゴールドだけではありません</h2>
-
-<p>ドル円・ユーロドル・ポンド円でも使用可能</p>
-</div>
-
-<!-- ⑨ 価格 -->
-<div class="section">
-<h2>各プラン</h2>
-
-<p>100万：ツールのみ</p>
-<p>150万：フルセット</p>
-<p>200万：PC付き</p>
-</div>
-
-<!-- ⑩ 最終 -->
-<div class="section">
-<h2>ここまで見て、まだ迷いますか？</h2>
-
-<p>あとは、やるかやらないかです。</p>
-
-<p class="gold">※10名限定</p>
-
-<div class="cta">
-LINEで連絡してください
-</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
+</nav>
+<header class="hero"><div class="wrap"><div class="kicker">法務・重要事項</div><h1>ご利用にあたって（重要事項）</h1><p>ご利用前にご確認ください。</p></div></header>
+<div class="wrap"><section><div class="card">
+<p>本ツールは、特定の利益を保証するものではありません。金融市場には価格変動リスクがあり、すべてのトレードにおいて損失が発生する可能性があります。</p>
+<p>本ツールは、あらかじめ設定されたロジックに基づき、売買のタイミングをサインとして表示するものであり、最終的な投資判断および取引の実行はご利用者様ご自身の責任にて行っていただきます。</p>
+<p>また、過去の実績やシミュレーション結果は、将来の成果を示唆・保証するものではありません。</p>
+<p>本ツールは、正しい使い方および資金管理を前提として設計されています。過度なロットでの取引や無理な運用は推奨しておりません。</p>
+<p>通信環境や取引環境、証券会社の仕様等により、サインの表示タイミングや約定結果に差異が生じる場合があります。これらを十分にご理解いただいた上で、ご利用ください。</p>
+<hr class="sep"/>
+<h2>返金保証について</h2>
+<p>指定環境・指定ルールで40回トレードし、1度も利益確定がなかった場合に限り返金対応を行います。</p>
+<ul class="list">
+<li>トレーダーズトラスト指定口座での使用</li>
+<li>サインに基づいたトレードの実施</li>
+<li>指定ルールでの運用</li>
+<li>40回分の取引履歴提出</li>
+</ul>
+</div></section></div></body></html>
