@@ -66,7 +66,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 </head>
 <body>
 <nav class="nav"><div class="nav-inner">
-<a href="#fv">トップ</a><a href="#empathy">止まる理由</a><a href="#gold">ゴールド</a><a href="#self">流れ</a><a href="#tool">使い方</a><a href="#markets">他の市場</a><a href="#profit">利益構造</a><a href="#price">価格</a><a href="#refund">返金保証</a><a href="#qa">Q&amp;A</a><a href="#closing">決断</a><a href="#important">重要事項</a>
+<a href="#fv">トップ</a><a href="#empathy">止まる理由</a><a href="#gold">ゴールド</a><a href="#self">流れ</a><a href="#tool">使い方</a><a href="#markets">他の通貨</a><a href="#profit">利益の流れ</a><a href="#price">価格</a><a href="#refund">返金保証</a><a href="#qa">Q&amp;A</a><a href="#closing">今すぐ確認</a><a href="#important">重要事項</a>
 </div></nav>
 
 <section id="fv" class="page tone-b">
@@ -75,11 +75,10 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
         <div class="stack gap-xxl narrow">
           <div class="hero-title">
             <h1>サインツールを使って<br>5万円から300万円へ</h1>
-            <div class="lead">サインに従うだけでここまで到達</div>
-            <div class="lead gold-text">300万円は通過点</div>
+            <div class="lead">サイン通りにトレードした結果</div>
+            <div class="lead">最短40回 / 40日で300万円到達モデル</div>
+            <div class="lead gold-text">この300万円はゴールではなく通過点</div>
           </div>
-          <div class="stats-inline">
-            <div class="stat-chip">40回</div>
             <div class="stat-chip">40日</div>
           </div>
         </div>
@@ -188,7 +187,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 
 <div id="panel-usdjpy" class="market-panel active">
 <div class="market-title">
-<div class="mini">USD/JPY</div><h3>ドル円の場合</h3><p class="copy">同じサインでここまで伸びる</p>
+<div class="mini">USD/JPY</div><h3 class="market-big">ドル円の場合</h3><p class="copy">同じサインでここまで伸びる</p>
 </div>
 <div class="chart-card"><div class="market-chart"><canvas id="chart-usdjpy" aria-label="ドル円残高推移"></canvas></div></div>
 <div class="table-shell"><div class="table-scroll"><table aria-label="ドル円表"><thead><tr><th>回数</th><th>日数</th><th>ロット</th><th>資金</th><th>証拠金</th><th>pips</th><th>利益</th><th>累計利益</th><th>残高</th></tr></thead><tbody>
@@ -241,7 +240,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 
 <div id="panel-eurusd" class="market-panel">
 <div class="market-title">
-<div class="mini">EUR/USD</div><h3>ユーロドルの場合</h3><p class="copy">通貨が変わっても同じ結果になる</p>
+<div class="mini">EUR/USD</div><h3 class="market-big">ユーロドルの場合</h3><p class="copy">通貨が変わっても同じように増える</p>
 </div>
 <div class="chart-card"><div class="market-chart"><canvas id="chart-eurusd" aria-label="ユーロドル残高推移"></canvas></div></div>
 <div class="table-shell"><div class="table-scroll"><table aria-label="ユーロドル表"><thead><tr><th>回数</th><th>日数</th><th>ロット</th><th>資金</th><th>証拠金</th><th>pips</th><th>利益</th><th>累計利益</th><th>残高</th></tr></thead><tbody>
@@ -292,7 +291,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 
 <div id="panel-gbpjpy" class="market-panel">
 <div class="market-title">
-<div class="mini">GBP/JPY</div><h3>ポンド円の場合</h3><p class="copy">値動きが違っても再現される</p>
+<div class="mini">GBP/JPY</div><h3 class="market-big">ポンド円の場合</h3><p class="copy">値動きが違っても同じように再現される</p>
 </div>
 <div class="chart-card"><div class="market-chart"><canvas id="chart-gbpjpy" aria-label="ポンド円残高推移"></canvas></div></div>
 <div class="table-shell"><div class="table-scroll"><table aria-label="ポンド円表"><thead><tr><th>回数</th><th>日数</th><th>ロット</th><th>資金</th><th>証拠金</th><th>pips</th><th>利益</th><th>累計利益</th><th>残高</th></tr></thead><tbody>
@@ -374,20 +373,27 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 </tbody></table></div></div>
 </div></div></div></section>
 
-<section id="refund" class="page tone-c"><div class="wrap"><div class="shell">
-<div class="center stack gap-xl narrow">
-<div class="refund-box"><div class="big">40回トレードして<br>1度も利益が出なかった場合は全額返金</div></div>
-</div>
-<div class="conditions">
-<p class="soft" style="margin-bottom:10px">※条件はそのまま下に表示</p>
-<ul>
-<li>トレーダーズトラスト指定口座での使用</li>
-<li>サインに基づいたトレードの実施</li>
-<li>指定ルールでの運用</li>
-<li>40回分の取引履歴提出</li>
-</ul>
-</div>
-</div></div></section>
+<section id="refund" class="page tone-c">
+    <div class="wrap">
+      <div class="shell">
+        <div class="center stack gap-xl narrow">
+          <h2>返金保証について</h2>
+          <div class="refund-box">
+            <div class="big">指定条件で40回トレードし<br>一度も利益が出なかった場合は全額返金</div>
+            <div class="refund-sub">条件を満たした場合のみ対応</div>
+          </div>
+        </div>
+        <div class="conditions">
+          <ul>
+            <li>トレーダーズトラスト指定口座での使用</li>
+            <li>サインに基づいたトレードの実施</li>
+            <li>指定ルールでの運用</li>
+            <li>40回分の取引履歴提出</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section id="qa" class="page tone-a"><div class="wrap"><div class="shell">
 <div class="center stack gap-xl narrow"><h2>よくある質問</h2><p class="copy">最後の迷いを消すためのQ&amp;Aです。</p></div>
@@ -410,7 +416,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 <div class="closing-line">行動しなければ<br>何も変わらない</div>
 <div class="closing-line gold-text">サインは出ている</div>
 <div class="closing-line">あとは入るだけ</div>
-<a href="#" class="line-cta">今すぐLINEで確認する</a>
+<div class="cta-block"><div class="cta-head">今すぐLINEで確認する</div><div class="cta-sub">迷って止まる前に、まず確認してください</div><a href="#" class="line-cta">今すぐLINEで確認する</a></div>
 </div>
 </div></div></section>
 
