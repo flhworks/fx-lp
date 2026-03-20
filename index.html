@@ -370,6 +370,19 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
 #refund .page-card,#qa .page-card,#important .page-card{padding:28px}
 #empathy .page-card,#self .page-card,#tool .page-card{max-width:980px; margin:0 auto}
 #closing .page-card{border-color:rgba(242,193,78,.22)}
+
+.market-tab[data-market="usdjpy"].active{background:rgba(142,197,255,.18); border-color:rgba(142,197,255,.40)}
+.market-tab[data-market="eurusd"].active{background:rgba(130,255,190,.16); border-color:rgba(130,255,190,.34)}
+.market-tab[data-market="gbpjpy"].active{background:rgba(242,193,78,.18); border-color:rgba(242,193,78,.42)}
+.market-panel.market--usdjpy{background:linear-gradient(180deg, rgba(142,197,255,.08), rgba(255,255,255,.02));}
+.market-panel.market--eurusd{background:linear-gradient(180deg, rgba(130,255,190,.07), rgba(255,255,255,.02));}
+.market-panel.market--gbpjpy{background:linear-gradient(180deg, rgba(242,193,78,.08), rgba(255,255,255,.02));}
+.market-label{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.04); color:var(--muted); font-size:12px; letter-spacing:.04em; width:max-content}
+.market-label::before{content:""; width:8px; height:8px; border-radius:999px; background:currentColor; opacity:.9}
+.market-copy h3{display:flex; flex-direction:column; gap:10px}
+.role-note{font-size:14px; color:var(--soft)}
+#gold .gold-intro .role-note{display:block; margin-top:4px; text-align:center}
+
 @media (max-width: 640px){
   #gold .wrap,#price .wrap,#closing .wrap{width:calc(100% - 16px)}
 }
@@ -420,7 +433,7 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
         <div class="stack center">
           <p class="soft">サインツールを使った結果</p>
           <h1>5万円から300万円。<br>ここは通過点です。</h1>
-          <p class="lead">販売しているのは、この到達を目指すためのサインツールです。</p>
+          <p class="lead">結果が先に見えるから、次の一歩が現実になります。</p>
           <div class="hero-proof">
             <p>裁量ではありません。</p>
             <p>サインに従うだけです。</p>
@@ -454,6 +467,7 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
         <h2>5万円が、ここまで伸びる</h2>
         <p class="copy">本ページでは、資金効率や再現性の観点からゴールドを例に解説しています。</p>
         <p class="copy">最短40回到達モデル。勝ちトレードベースのため、実運用では回数は前後します。</p>
+        <p class="role-note">ここでは、最もイメージしやすいゴールドを基準に置いています。</p>
       </div>
       <div class="hero-chart-shell">
         <canvas id="chart-gold"></canvas>
@@ -532,13 +546,13 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
     <div class="wrap">
       <div class="page-card">
         <div class="stack center">
-          <h2>販売しているのは、<br>サインツールです。</h2>
+          <h2>この結果を形にしているのが、<br>サインツールです。</h2>
         </div>
         <div class="tool-grid" style="margin-top:18px">
-          <div class="tool-card"><strong>サイン通りにエントリー</strong><p class="copy">やることは1つだけです。</p></div>
-          <div class="tool-card"><strong>TP/SLも最初から決まっている</strong><p class="copy">入る前も、入った後も迷わせません。</p></div>
-          <div class="tool-card"><strong>通知機能がある</strong><p class="copy">張り付き前提にしません。</p></div>
-          <div class="tool-card"><strong>放置で完結する</strong><p class="copy">裁量で考え続ける構造ではありません。</p></div>
+          <div class="tool-card"><strong>サイン通りにエントリー</strong><p class="copy">見えた通りに、そのまま動けます。</p></div>
+          <div class="tool-card"><strong>TP/SLも最初から決まっている</strong><p class="copy">入る前も、入った後も判断を増やしません。</p></div>
+          <div class="tool-card"><strong>通知機能がある</strong><p class="copy">気づくための動線が最初からあります。</p></div>
+          <div class="tool-card"><strong>放置で完結する</strong><p class="copy">考え続けるより、進めやすさを優先しています。</p></div>
         </div>
       </div>
     </div>
@@ -548,8 +562,8 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
     <div class="wrap">
       <div class="page-card">
         <div class="stack center">
-          <h2>ゴールド専用ではありません。</h2>
-          <p class="copy">通貨でも、同じ考え方で到達を目指せます。</p>
+          <h2>入口が違っても、見える流れは同じです。</h2>
+          <p class="copy">ゴールドだけでなく、通貨でも同じ考え方で到達を目指せます。</p>
         </div>
         <div class="market-panel-wrap" style="margin-top:18px">
           <div class="market-tabs">
@@ -558,16 +572,12 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
             <button class="market-tab" data-market="gbpjpy">ポンド円</button>
           </div>
 
-          <div class="market-panel active" data-panel="usdjpy">
+          <div class="market-panel market--usdjpy active" data-panel="usdjpy">
             <div class="market-copy">
-              <h3>ドル円シミュレーション</h3>
+              <h3><span class="market-label">USD/JPY</span><span>ドル円シミュレーション</span></h3>
               <p class="copy">最も馴染みのある通貨ペアでも、同じ考え方で運用可能です。</p>
               <p class="copy">ドル円は情報量が多く、馴染みがある一方で、伸び方や必要ロットはゴールドと異なります。</p>
-              <p class="copy">補足</p>
-              <p class="copy">このページは証拠ページです。</p>
-              <p class="copy">市場ごとに値幅・伸び方・必要ロットは変わります。</p>
-              <p class="copy">ただし、ロジック自体は同じ考え方で運用可能です。</p>
-              <p class="copy">※このページ内にLINEリンクは設置していません。ご確認後、いつでもご連絡ください。</p>
+              <p class="role-note">ゴールドを主役の成功イメージとするなら、ここは汎用性を確認するための見せ場です。</p>
             </div>
             <div class="market-chart-shell"><canvas id="chart-usdjpy"></canvas></div>
             <div class="table-shell">
@@ -623,16 +633,12 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
             </div>
           </div>
 
-          <div class="market-panel" data-panel="eurusd">
+          <div class="market-panel market--eurusd" data-panel="eurusd">
             <div class="market-copy">
-              <h3>ユーロドルシミュレーション</h3>
+              <h3><span class="market-label">EUR/USD</span><span>ユーロドルシミュレーション</span></h3>
               <p class="copy">世界で最も取引量の多い通貨ペアでも、同様に運用可能です。</p>
               <p class="copy">ユーロドルはバランス型の市場として、安定寄りの伸び方になります。</p>
-              <p class="copy">補足</p>
-              <p class="copy">このページは証拠ページです。</p>
-              <p class="copy">市場ごとに値幅・伸び方・必要ロットは変わります。</p>
-              <p class="copy">ただし、ロジック自体は同じ考え方で運用可能です。</p>
-              <p class="copy">※このページ内にLINEリンクは設置していません。ご確認後、いつでもご連絡ください。</p>
+              <p class="role-note">ゴールドとは違う見え方でも、サインツールを使った流れはそのまま通ります。</p>
             </div>
             <div class="market-chart-shell"><canvas id="chart-eurusd"></canvas></div>
             <div class="table-shell">
@@ -686,16 +692,12 @@ th:first-child,td:first-child,th:nth-child(2),td:nth-child(2),th:nth-child(3),td
             </div>
           </div>
 
-          <div class="market-panel" data-panel="gbpjpy">
+          <div class="market-panel market--gbpjpy" data-panel="gbpjpy">
             <div class="market-copy">
-              <h3>ポンド円シミュレーション</h3>
+              <h3><span class="market-label">GBP/JPY</span><span>ポンド円シミュレーション</span></h3>
               <p class="copy">値動きの大きいポンド円でも、同じロジックで運用可能です。</p>
               <p class="copy">ポンド円は値動きが大きい分、チャンスもありますが、ブレも出やすい市場です。</p>
-              <p class="copy">補足</p>
-              <p class="copy">このページは証拠ページです。</p>
-              <p class="copy">市場ごとに値幅・伸び方・必要ロットは変わります。</p>
-              <p class="copy">ただし、ロジック自体は同じ考え方で運用可能です。</p>
-              <p class="copy">※このページ内にLINEリンクは設置していません。ご確認後、いつでもご連絡ください。</p>
+              <p class="role-note">入口が変わっても、サインツールを使った到達イメージは他人事のまま終わりません。</p>
             </div>
             <div class="market-chart-shell"><canvas id="chart-gbpjpy"></canvas></div>
             <div class="table-shell">
