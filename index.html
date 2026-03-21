@@ -750,7 +750,22 @@
       }
     }
 
-    @media (max-width: 980px){
+    
+    /* line-break control for specified elements */
+    #anxiety .same-head{
+      word-break: keep-all;
+      overflow-wrap: normal;
+      line-break: strict;
+      white-space: normal;
+    }
+    #refund .refund-box .big{
+      word-break: keep-all;
+      overflow-wrap: normal;
+      line-break: strict;
+      white-space: normal;
+    }
+
+@media (max-width: 980px){
       .split{grid-template-columns:1fr}
       .feature-grid{grid-template-columns:1fr}
       .pill-grid{grid-template-columns:1fr}
@@ -809,7 +824,7 @@
     <div class="wrap">
       <div class="shell">
         <div class="center stack gap-xl narrow anxiety-head">
-          <div class="same-head">あなたがやらない理由は何ですか？</div>
+          <div class="same-head">あなたがやらない理由は<br>何ですか？</div>
           <div class="same-head">その理由、解決してみせます。</div>
         </div>
         <div class="line-list" style="margin-top:26px">
@@ -1198,7 +1213,9 @@
         <div class="center stack gap-xl narrow refund-head">
           <h2>返金保証について</h2>
           <div class="refund-box">
-            <div class="big">指定条件で40回トレードし<br>一度も利益が出なかった場合は全額返金</div>
+            <div class="big">指定条件で40回トレードし<br>
+一度も利益が出なかった場合は<br>
+全額返金</div>
             <div class="refund-sub">条件を満たした場合のみ対応</div>
           </div>
           <div class="conditions conditions-center">
