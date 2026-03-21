@@ -65,18 +65,19 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 </style>
 </head>
 <body>
-  <nav class="nav">
+    <nav class="nav">
     <div class="nav-inner">
       <a href="#fv">トップ</a>
-      <a href="#anxiety">不安</a>
-      <a href="#gold">ゴールド結果</a>
-      <a href="#self">やること</a>
-      <a href="#markets">他の通貨</a>
+      <a href="#gold">ゴールド</a>
+      <a href="#self">トレード方法</a>
+      <a href="#usdjpy">ドル円</a>
+      <a href="#eurusd">ユーロドル</a>
+      <a href="#gbpjpy">ポンド円</a>
       <a href="#profit">購入金額の回収</a>
       <a href="#price">価格</a>
       <a href="#refund">返金保証</a>
       <a href="#qa">Q&amp;A</a>
-      <a href="#closing">LINEで連絡</a>
+      <a href="#line">LINEで連絡</a>
       <a href="#important">重要事項</a>
     </div>
   </nav>
@@ -87,7 +88,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
         <div class="stack gap-xxl narrow">
           <div class="hero-title">
             <h1>サインツールを使って<br>5万円から300万円へ</h1>
-            <div class="lead">サインに従うだけでここまで到達</div>
+            <div class="lead">1日1回サインに従ってトレードするだけで、<br>40日後には300万円を超える</div>
             <div class="lead gold-text">300万円は通過点</div>
           </div>
         </div>
@@ -103,17 +104,14 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 <div class="line-item">でも、お金で止まっている</div>
 <div class="line-item">本当に自分にも出来るのか不安</div>
 <div class="line-item">まだどこか他人事に見えている</div>
-<p class="bridge-line">その不安を、ここから結果で消していきます</p>
+
 </div>
 </div></div></section>
 
 <section id="gold" class="page tone-c"><div class="wrap"><div class="shell">
 <div class="center stack gap-xl narrow">
-<div class="eyebrow center" style="justify-content:center"><span class="dot"></span>これが結果です</div>
-<h2>サインツールでここまで伸びた</h2>
-<p class="copy">サインツールを使った結果</p>
-<p class="lead">サインに従ってトレードしただけで、<br>5万円がここまで伸びた</p>
-</div>
+<h2>ゴールド</h2>
+          <p class="lead">サインツールを使ってゴールドをトレードしただけで<br>資金5万円でもここまで増やす事が出来る</p></div>
 <div class="chart-card" style="margin-top:24px">
 <div class="chart-head"><div class="mini">この300万円は通過点</div><div class="chart-note">全てサイン通りにエントリーした結果</div></div>
 <div class="hero-chart"><canvas id="chart-gold" aria-label="ゴールド残高推移"></canvas></div>
@@ -167,7 +165,7 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
     <div class="wrap">
       <div class="shell">
         <div class="center stack gap-xl narrow">
-          <h2>やることはこれだけ</h2>
+          <h2>トレード方法</h2>
         </div>
         <div class="pill-grid" style="margin-top:26px">
           <div class="pill">サインが出る</div>
@@ -183,20 +181,16 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
     </div>
   </section>
 
-<section id="markets" class="page tone-c"><div class="wrap"><div class="shell">
-<div class="center stack gap-xl narrow">
-<h2>ゴールドだけではありません</h2>
-<p class="lead">同じサインツールで<br>他の通貨でも同じように再現される</p>
-</div>
-<p class="copy center" style="margin-top:24px;margin-bottom:12px">他の通貨でも同じ結果を見る</p>
-<div class="market-tabs">
-<button class="market-tab active" data-market="usdjpy">ドル円</button>
-<button class="market-tab" data-market="eurusd">ユーロドル</button>
-<button class="market-tab" data-market="gbpjpy">ポンド円</button>
-</div>
 
-<div id="panel-usdjpy" class="market-panel active market-panel--usdjpy">
-<div class="market-title">
+  <section id="usdjpy" class="page tone-c">
+    <div class="wrap">
+      <div class="shell">
+        <div class="center stack gap-xl narrow">
+          <h2>ドル円</h2>
+          <p class="lead">同じサインでここまで伸びる</p>
+        </div>
+        <div class="market-single" style="margin-top:24px">
+          <div class="market-title">
 <div class="mini">USD/JPY</div><h3>ドル円の場合</h3><p class="copy">同じサインでここまで伸びる</p>
 </div>
 <div class="chart-card"><div class="market-chart"><canvas id="chart-usdjpy" aria-label="ドル円残高推移"></canvas></div></div>
@@ -246,10 +240,20 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 <tr><td>43</td><td>43</td><td>3.35</td><td>2,682,000</td><td>26,666</td><td>80</td><td>268,000</td><td>2,900,000</td><td>2,950,000</td></tr>
 <tr><td>44</td><td>44</td><td>3.68</td><td>2,950,000</td><td>29,293</td><td>80</td><td>294,400</td><td>3,194,400</td><td>3,244,400</td></tr>
 </tbody></table></div></div>
-</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div id="panel-eurusd" class="market-panel market-panel--eurusd">
-<div class="market-title">
+  <section id="eurusd" class="page tone-a">
+    <div class="wrap">
+      <div class="shell">
+        <div class="center stack gap-xl narrow">
+          <h2>ユーロドル</h2>
+          <p class="lead">通貨が変わっても同じように増える</p>
+        </div>
+        <div class="market-single" style="margin-top:24px">
+          <div class="market-title">
 <div class="mini">EUR/USD</div><h3>ユーロドルの場合</h3><p class="copy">通貨が変わっても同じ結果になる</p>
 </div>
 <div class="chart-card"><div class="market-chart"><canvas id="chart-eurusd" aria-label="ユーロドル残高推移"></canvas></div></div>
@@ -297,10 +301,20 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 <tr><td>41</td><td>41</td><td>2.27</td><td>2,516,408</td><td>20,786</td><td>70</td><td>252,651</td><td>2,719,059</td><td>2,769,059</td></tr>
 <tr><td>42</td><td>42</td><td>2.49</td><td>2,769,059</td><td>22,800</td><td>70</td><td>277,137</td><td>2,996,196</td><td>3,046,196</td></tr>
 </tbody></table></div></div>
-</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div id="panel-gbpjpy" class="market-panel market-panel--gbpjpy">
-<div class="market-title">
+  <section id="gbpjpy" class="page tone-b">
+    <div class="wrap">
+      <div class="shell">
+        <div class="center stack gap-xl narrow">
+          <h2>ポンド円</h2>
+          <p class="lead">値動きが違っても同じように再現される</p>
+        </div>
+        <div class="market-single" style="margin-top:24px">
+          <div class="market-title">
 <div class="mini">GBP/JPY</div><h3>ポンド円の場合</h3><p class="copy">値動きが違っても再現される</p>
 </div>
 <div class="chart-card"><div class="market-chart"><canvas id="chart-gbpjpy" aria-label="ポンド円残高推移"></canvas></div></div>
@@ -349,19 +363,19 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 <tr><td>42</td><td>42</td><td>1.60</td><td>2,402,000</td><td>10,666</td><td>150</td><td>240,000</td><td>2,592,000</td><td>2,642,000</td></tr>
 <tr><td>43</td><td>43</td><td>1.76</td><td>2,642,000</td><td>11,733</td><td>150</td><td>264,000</td><td>2,856,000</td><td>2,906,000</td></tr>
 <tr><td>44</td><td>44</td><td>1.90</td><td>2,906,000</td><td>12,666</td><td>150</td><td>285,000</td><td>3,141,000</td><td>3,191,000</td></tr>
-</tbody></table></div></div>
-</div>
-</div></div></section>
-
+</tbody></table></div>
+        </div>
+      </div>
+    </div>
+  </section>
 <section id="profit" class="page tone-a"><div class="wrap"><div class="shell">
-<div class="center stack gap-xl narrow"><h2>5万円から始めて、<br>途中で購入金額を回収できる</h2></div>
+<div class="center stack gap-xl narrow"><h2>購入金額の回収</h2></div>
 <div class="flow" style="margin-top:26px">
           <div class="flow-line">5万円からスタート</div>
           <div class="flow-line">サイン通りに増えていく</div>
           <div class="flow-line">途中で購入金額を回収</div>
           <div class="flow-line">その先も利益が積み上がる</div>
         </div>
-
         <div class="modes">
 <div class="mode"><strong>回収型</strong><span>購入金額に到達した時点で出金する</span></div>
 <div class="mode"><strong>出金型</strong><span>利益が出た分を途中で出金しながら進める</span></div>
@@ -383,20 +397,27 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
 </tbody></table></div></div>
 </div></div></div></section>
 
-<section id="refund" class="page tone-c"><div class="wrap"><div class="shell">
-<div class="center stack gap-xl narrow">
-<div class="refund-box"><div class="big">40回トレードして<br>1度も利益が出なかった場合は全額返金</div></div>
-</div>
-<div class="conditions">
-<p class="soft" style="margin-bottom:10px">※条件はそのまま下に表示</p>
-<ul>
-<li>トレーダーズトラスト指定口座での使用</li>
-<li>サインに基づいたトレードの実施</li>
-<li>指定ルールでの運用</li>
-<li>40回分の取引履歴提出</li>
-</ul>
-</div>
-</div></div></section>
+<section id="refund" class="page tone-c">
+    <div class="wrap">
+      <div class="shell">
+        <div class="center stack gap-xl narrow">
+          <h2>返金保証について</h2>
+          <div class="refund-box">
+            <div class="big">指定条件で40回トレードし<br>一度も利益が出なかった場合は全額返金</div>
+            <div class="refund-sub">条件を満たした場合のみ対応</div>
+          </div>
+          <div class="conditions conditions-center">
+            <ul>
+              <li>トレーダーズトラスト指定口座での使用</li>
+              <li>サインに基づいたトレードの実施</li>
+              <li>指定ルールでの運用</li>
+              <li>40回分の取引履歴提出</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section id="qa" class="page tone-a"><div class="wrap"><div class="shell">
 <div class="center stack gap-xl narrow"><h2>よくある質問</h2><p class="copy">最後の迷いを消すためのQ&amp;Aです。</p></div>
@@ -421,11 +442,18 @@ table{width:100%;min-width:900px;border-collapse:collapse;font-size:14px} th,td{
           <div class="closing-line">行動しなければ<br>何も変わらない</div>
           <div class="closing-line gold-text">サインは出ている</div>
           <div class="closing-line">あとは入るだけ</div>
-          <div class="cta-block">
-            <div class="cta-head">今すぐLINEで連絡する</div>
-            <div class="cta-sub">迷って止まる前に、まず連絡してください</div>
-            <a href="#" class="line-cta">今すぐLINEで連絡する</a>
-          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="line" class="page tone-c">
+    <div class="wrap">
+      <div class="shell">
+        <div class="closing-wrap">
+          <h2>今すぐLINEで連絡する</h2>
+          <p class="lead">迷って止まる前に、まず連絡してください</p>
+          <a href="#" class="line-cta">今すぐLINEで連絡する</a>
         </div>
       </div>
     </div>
