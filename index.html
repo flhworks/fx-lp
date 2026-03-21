@@ -1361,14 +1361,82 @@
   
 
 
+
+/* table / graph / paragraph alignment reset */
+.table-shell {
+  background: #ffffff;
+  color: #111111;
+  border-radius: 12px;
+}
+
+.table-shell table {
+  color: #111111;
+  background: #ffffff;
+}
+
+.table-shell th {
+  background: #f5f5f5;
+  color: #111111;
+}
+
+.table-shell td {
+  color: #111111;
+  background: #ffffff;
+}
+
+.table-shell tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.chart-card canvas,
+.chart-card svg {
+  background: #ffffff;
+}
+
+.chart-card text {
+  fill: #111111;
+}
+
+.chart-card .axis,
+.chart-card .label {
+  color: #111111;
+}
+
+h1, h2, h3, .lead, .same-head, .section-strong, .refund-box .big, .final-contact, .closing-line {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-break: strict;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 760px;
+}
+
+.chart-head, .refund-box, .closing-wrap, .center.stack.gap-xl.narrow {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  h1, h2, h3, .lead, .same-head, .section-strong, .refund-box .big, .final-contact, .closing-line {
+    max-width: 100%;
+  }
+}
+
 </style>
 </head>
 <body>
     <nav class="nav">
     <div class="nav-inner">
       <a href="#fv">トップ</a>
-      <a href="#gold">ゴールド</a>
       <a href="#self">トレード方法</a>
+      <a href="#gold">ゴールド</a>
       <a href="#usdjpy">ドル円</a>
       <a href="#eurusd">ユーロドル</a>
       <a href="#gbpjpy">ポンド円</a>
@@ -1936,12 +2004,12 @@
       ctx.clearRect(0,0,width,height);
 
       const bgGrad = ctx.createLinearGradient(0,0,0,height);
-      bgGrad.addColorStop(0,'rgba(255,255,255,0.025)');
-      bgGrad.addColorStop(1,'rgba(255,255,255,0)');
+      bgGrad.addColorStop(0,'rgba(255,255,255,1)');
+      bgGrad.addColorStop(1,'rgba(255,255,255,1)');
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0,0,width,height);
 
-      ctx.strokeStyle = 'rgba(255,255,255,.08)';
+      ctx.strokeStyle = 'rgba(210,210,210,1)';
       ctx.lineWidth = 1*dpr;
       ctx.beginPath();
       for(let i=0;i<5;i++){
@@ -1959,7 +2027,7 @@
       }
       ctx.stroke();
 
-      ctx.strokeStyle = 'rgba(143,195,255,.95)';
+      ctx.strokeStyle = 'rgba(59,130,246,1)';
       ctx.lineWidth = 3*dpr;
       ctx.beginPath();
       data.forEach((d,i)=>{
@@ -1969,15 +2037,15 @@
       ctx.stroke();
 
       const area = ctx.createLinearGradient(0,pad.top,0,height-pad.bottom);
-      area.addColorStop(0,'rgba(240,194,76,.24)');
-      area.addColorStop(1,'rgba(240,194,76,0)');
+      area.addColorStop(0,'rgba(59,130,246,.18)');
+      area.addColorStop(1,'rgba(59,130,246,0)');
       ctx.lineTo(xPos(data[data.length-1][0]), height-pad.bottom);
       ctx.lineTo(xPos(data[0][0]), height-pad.bottom);
       ctx.closePath();
       ctx.fillStyle = area;
       ctx.fill();
 
-      ctx.strokeStyle = 'rgba(143,195,255,.95)';
+      ctx.strokeStyle = 'rgba(59,130,246,1)';
       ctx.lineWidth = 3*dpr;
       ctx.beginPath();
       data.forEach((d,i)=>{
@@ -1988,12 +2056,12 @@
 
       const last = data[data.length-1];
       const lx = xPos(last[0]), ly = yPos(last[1]);
-      ctx.fillStyle = '#f0c24c';
+      ctx.fillStyle = 'rgba(59,130,246,1)';
       ctx.beginPath();
       ctx.arc(lx, ly, 5*dpr, 0, Math.PI*2);
       ctx.fill();
 
-      ctx.fillStyle = 'rgba(245,247,251,.86)';
+      ctx.fillStyle = '#111111';
       ctx.font = `${12*dpr}px -apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Meiryo",sans-serif`;
       ctx.textAlign = 'center';
       for(let i=0;i<6;i++){
