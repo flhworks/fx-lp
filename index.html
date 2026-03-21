@@ -512,6 +512,36 @@
       gap:16px;
     }
     
+    
+    .anxiety-head{
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    .same-head{
+      font-size:clamp(30px, 6vw, 54px);
+      line-height:1.16;
+      font-weight:800;
+      color:#fff;
+      text-align:center;
+    }
+    .refund-head{
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    .conditions-center{
+      max-width:600px;
+      width:100%;
+      margin:0 auto;
+      text-align:center;
+    }
+    .conditions-center ul{
+      max-width:600px;
+      width:100%;
+      margin:0 auto;
+    }
+
     .section-strong{
       font-size:clamp(28px, 5.2vw, 44px);
       line-height:1.25;
@@ -582,6 +612,69 @@
       margin-top:10px;
     }
 
+    
+    #anxiety .shell{
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    #anxiety .center.stack.gap-xl.narrow{
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    #anxiety .section-strong{
+      display:block;
+      margin:24px auto;
+      text-align:center;
+    }
+    #anxiety .line-list{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:16px;
+      max-width:800px;
+      margin:26px auto 0;
+      text-align:center;
+    }
+    #anxiety .line-item{
+      width:100%;
+      max-width:500px;
+    }
+
+    #refund .shell{
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    #refund .center.stack.gap-xl.narrow{
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    #refund .refund-box{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      max-width:800px;
+      margin:0 auto;
+      text-align:center;
+    }
+    #refund .conditions,
+    #refund .conditions-center{
+      max-width:600px;
+      width:100%;
+      margin:0 auto;
+      text-align:center;
+    }
+    #refund .conditions ul,
+    #refund .conditions-center ul{
+      max-width:600px;
+      width:100%;
+    }
+
+
     @media (max-width: 980px){
       .split{grid-template-columns:1fr}
       .feature-grid{grid-template-columns:1fr}
@@ -640,9 +733,9 @@
   <section id="anxiety" class="page tone-a">
     <div class="wrap">
       <div class="shell">
-        <div class="center stack gap-xl narrow">
-          <h2>あなたがやらない理由は何ですか？</h2>
-          <div class="section-strong">その理由、解決してみせます。</div>
+        <div class="center stack gap-xl narrow anxiety-head">
+          <div class="same-head">あなたがやらない理由は何ですか？</div>
+          <div class="same-head">その理由、解決してみせます。</div>
         </div>
         <div class="line-list" style="margin-top:26px">
           <div class="line-item">気になっている</div>
@@ -1027,7 +1120,7 @@
   <section id="refund" class="page tone-c">
     <div class="wrap">
       <div class="shell">
-        <div class="center stack gap-xl narrow">
+        <div class="center stack gap-xl narrow refund-head">
           <h2>返金保証について</h2>
           <div class="refund-box">
             <div class="big">指定条件で40回トレードし<br>一度も利益が出なかった場合は全額返金</div>
@@ -1046,7 +1139,7 @@
     </div>
   </section>
 
-  <section id="qa" class="page tone-a">
+<section id="qa" class="page tone-a">
     <div class="wrap">
       <div class="shell">
         <div class="center stack gap-xl narrow">
@@ -1120,12 +1213,6 @@
           <p>また、過去の実績やシミュレーション結果は、将来の成果を示唆・保証するものではありません。</p>
           <p>本ツールは、正しい使い方および資金管理を前提として設計されています。過度なロットでの取引や無理な運用は推奨しておりません。</p>
           <p>通信環境や取引環境、証券会社の仕様等により、サインの表示タイミングや約定結果に差異が生じる場合があります。これらを十分にご理解いただいた上で、ご利用ください。</p>
-          <p class="subhead">返金保証について</p>
-          <p>指定環境・指定ルールで40回トレードし、1度も利益確定がなかった場合に限り返金対応を行います。</p>
-          <p>トレーダーズトラスト指定口座での使用</p>
-          <p>サインに基づいたトレードの実施</p>
-          <p>指定ルールでの運用</p>
-          <p>40回分の取引履歴提出</p>
         </div>
       </div>
     </div>
