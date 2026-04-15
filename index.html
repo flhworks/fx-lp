@@ -237,6 +237,25 @@
       from { opacity: 0; filter: blur(10px); transform: scale(0.98); }
       to { opacity: 1; filter: blur(0); transform: scale(1); }
     }
+    
+    /* 回収目安ボックス */
+    .recovery-box {
+      margin-bottom: 25px;
+      padding: 20px;
+      border: 1px solid rgba(234, 255, 0, 0.4);
+      background: rgba(234, 255, 0, 0.05);
+      box-shadow: inset 0 0 20px rgba(234, 255, 0, 0.02);
+    }
+    .recovery-box p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    .recovery-box .highlight {
+      font-size: 1.8rem;
+      color: var(--neon-yellow);
+      margin: 0 5px;
+    }
 
     .chart-container {
       padding: 20px;
@@ -252,7 +271,6 @@
       border: 1px solid var(--line);
       background: #02040a;
     }
-    /* スクロールバーのサイバー化 */
     .data-table-wrapper::-webkit-scrollbar { width: 8px; height: 8px; }
     .data-table-wrapper::-webkit-scrollbar-track { background: #000; }
     .data-table-wrapper::-webkit-scrollbar-thumb { background: var(--neon-cyan); }
@@ -301,16 +319,24 @@
     /* ========================================================
        プラン
     ======================================================== */
+    .plan-intro {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
     .plan-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      align-items: center;
+      align-items: stretch;
     }
     .plan-card {
       padding: 40px 20px;
       text-align: center;
       transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
     }
     .plan-card.pro {
       border-color: var(--neon-yellow);
@@ -328,6 +354,16 @@
       margin-bottom: 20px;
       font-size: 0.9rem;
     }
+    .plan-name {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    .plan-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      min-height: 45px;
+    }
     .plan-price {
       font-size: 2.5rem;
       font-weight: 900;
@@ -340,6 +376,7 @@
       text-align: left;
       margin: 0 auto;
       max-width: 250px;
+      flex-grow: 1;
     }
     .plan-list li {
       margin-bottom: 15px;
@@ -394,7 +431,6 @@
     }
     .qa-q { font-size: 1.2rem; font-weight: bold; color: #fff; margin-bottom: 15px; }
     .qa-a { color: var(--text-muted); }
-    .qa-a strong { color: var(--neon-yellow); }
 
     /* ========================================================
        最終クロージング
@@ -428,7 +464,7 @@
       margin-bottom: 20px;
     }
     .action-target {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 900;
       color: var(--neon-yellow);
       letter-spacing: 0.05em;
@@ -512,7 +548,7 @@
     <div class="container">
       <h2 class="sec-title text-center text-yellow">ROADMAP TO RECOVERY</h2>
       <p class="text-center lead">
-        150万円という金額。それは「失う出費」ではなく、<br>この表の途中で確実に「回収し、通過する数字」に過ぎません。
+        100万、150万、200万。<br>あなたが選んだプランの代金は、「失う出費」ではなく、<br>この表の途中で確実に「回収し、通過する数字」に過ぎません。
       </p>
 
       <div class="tab-container">
@@ -523,6 +559,11 @@
       </div>
 
       <div id="gold" class="panel active">
+        <div class="recovery-box cyber-panel text-center">
+          <p>【 各プランの回収目安 】<br>
+            100万：<span class="highlight">29</span>回（約29日） / 150万：<span class="highlight">33</span>回（約33日） / 200万：<span class="highlight">36</span>回（約36日）
+          </p>
+        </div>
         <div class="chart-container cyber-panel">
           <canvas id="chart-gold"></canvas>
         </div>
@@ -576,6 +617,11 @@
       </div>
 
       <div id="usdjpy" class="panel">
+        <div class="recovery-box cyber-panel text-center">
+          <p>【 各プランの回収目安 】<br>
+            100万：<span class="highlight">32</span>回（約32日） / 150万：<span class="highlight">37</span>回（約37日） / 200万：<span class="highlight">40</span>回（約40日）
+          </p>
+        </div>
         <div class="chart-container cyber-panel">
           <canvas id="chart-usdjpy"></canvas>
         </div>
@@ -633,6 +679,11 @@
       </div>
 
       <div id="eurusd" class="panel">
+        <div class="recovery-box cyber-panel text-center">
+          <p>【 各プランの回収目安 】<br>
+            100万：<span class="highlight">31</span>回（約31日） / 150万：<span class="highlight">36</span>回（約36日） / 200万：<span class="highlight">38</span>回（約38日）
+          </p>
+        </div>
         <div class="chart-container cyber-panel">
           <canvas id="chart-eurusd"></canvas>
         </div>
@@ -688,6 +739,11 @@
       </div>
 
       <div id="gbpjpy" class="panel">
+        <div class="recovery-box cyber-panel text-center">
+          <p>【 各プランの回収目安 】<br>
+            100万：<span class="highlight">32</span>回（約32日） / 150万：<span class="highlight">37</span>回（約37日） / 200万：<span class="highlight">39</span>回（約39日）
+          </p>
+        </div>
         <div class="chart-container cyber-panel">
           <canvas id="chart-gbpjpy"></canvas>
         </div>
@@ -770,9 +826,14 @@
   <section class="section">
     <div class="container">
       <h2 class="sec-title text-center text-cyan">PACKAGE PLAN</h2>
+      <p class="plan-intro text-center">
+        どのプランを選ぶべきか迷った場合は、ツールが全て揃い、<br>最も多くの方に選ばれている「150万円プラン」をおすすめします。
+      </p>
       <div class="plan-grid">
+        
         <div class="plan-card cyber-panel">
           <div class="plan-name">100万円プラン</div>
+          <div class="plan-desc">まずはサインツールだけを手に入れたい方向けのミニマムプラン</div>
           <div class="plan-price">¥1,000,000</div>
           <ul class="plan-list">
             <li>サインツール一式</li>
@@ -781,9 +842,11 @@
             <li class="disabled">設定済みPC本体付属</li>
           </ul>
         </div>
+
         <div class="plan-card cyber-panel pro">
           <div class="plan-badge">RECOMMEND</div>
           <div class="plan-name text-yellow">150万円プラン</div>
+          <div class="plan-desc" style="color: #fff;">ツールがすべて揃った完全版。<br>最も選ばれている推奨プランです。</div>
           <div class="plan-price text-yellow">¥1,500,000</div>
           <ul class="plan-list">
             <li>サインツール一式</li>
@@ -792,8 +855,10 @@
             <li class="disabled">設定済みPC本体付属</li>
           </ul>
         </div>
+
         <div class="plan-card cyber-panel">
           <div class="plan-name">200万円プラン</div>
+          <div class="plan-desc">PCの初期設定など面倒な作業をすべて任せたい方向けのフルサポートプラン</div>
           <div class="plan-price">¥2,000,000</div>
           <ul class="plan-list">
             <li>サインツール一式</li>
@@ -802,6 +867,7 @@
             <li class="text-cyan">設定済みPC本体付属</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
@@ -824,7 +890,7 @@
       <div class="flow-wrap">
         <div class="flow-item">
           <h4>STEP 1：決断と連絡</h4>
-          <p>今すぐこの画面を閉じ、LINEへ「〇〇プラン購入希望」とメッセージを送信してください。</p>
+          <p>今すぐこの画面を閉じ、LINEでご希望のプランをお送りください。</p>
         </div>
         <div class="flow-item">
           <h4>STEP 2：お手続きとアドレス指定</h4>
@@ -843,7 +909,7 @@
       <div class="qa-wrap" style="margin-top: 60px;">
         <div class="qa-box cyber-panel">
           <div class="qa-q">Q. パソコンが苦手で、自分でインストールできるか不安です。</div>
-          <div class="qa-a">A. わかりやすい専用マニュアルを同梱しています。それでも難しい場合は、<strong>私達サポートチーム</strong>が入り、確実に稼働するまでお手伝いします。「設定できない」という理由でつまずくことはありません。</div>
+          <div class="qa-a">A. わかりやすい専用マニュアルを同梱しています。それでも難しい場合は、私達サポートチームが入り、確実に稼働するまでお手伝いします。「設定できない」という理由でつまずくことはありません。</div>
         </div>
         <div class="qa-box cyber-panel">
           <div class="qa-q">Q. 負けるのがどうしても怖いです。本当に返金されますか？</div>
@@ -851,11 +917,11 @@
         </div>
         <div class="qa-box cyber-panel">
           <div class="qa-q">Q. 200万円プラン（PC付属）の場合、どのくらいで届きますか？</div>
-          <div class="qa-a">A. お振込確認後、すぐに<strong>専門スタッフ</strong>が専用PCのセットアップ作業を開始し、完成次第ご指定の住所へ郵送いたします。電源を入れればすぐにスタートできる状態でお届けします。（※具体的な納期はLINEで個別にお伝えします）</div>
+          <div class="qa-a">A. お振込確認後、すぐに専門スタッフが専用PCのセットアップ作業を開始し、完成次第ご指定の住所へ郵送いたします。電源を入れればすぐにスタートできる状態でお届けします。（※具体的な納期はLINEで個別にお伝えします）</div>
         </div>
         <div class="qa-box cyber-panel">
           <div class="qa-q">Q. 今すぐにお金が全額用意できないのですが…</div>
-          <div class="qa-a">A. クレジットカードの枠など、個別の資金状況があるかと思います。「本気で現状を変えたい、でもあと一歩資金のやりくりが…」という場合は、迷わずLINEで直接ご相談ください。最善のルートを一緒に考えます。</div>
+          <div class="qa-a">A. 個別の資金状況があるかと思います。「本気で現状を変えたい、でもあと一歩資金のやりくりが…」という場合は、迷わずLINEで直接ご相談ください。最善のルートを一緒に考えます。</div>
         </div>
       </div>
     </div>
@@ -869,7 +935,7 @@
         </div>
         <div class="action-plate">
           <div class="action-instruction">今すぐ、この画面を閉じて</div>
-          <div class="action-target">LINEで「〇〇プラン希望」と<br>メッセージを送ってください。</div>
+          <div class="action-target">LINEでご希望のプランを<br>お送りください。</div>
         </div>
       </div>
     </div>
